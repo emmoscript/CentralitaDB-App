@@ -1,0 +1,39 @@
+﻿@model List<CentralitaDB_App.Models.Llamada>
+
+@{
+    ViewData["Title"] = "Listado de Llamadas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Número Origen</th>
+            <th>Número Destino</th>
+            <th>Duración</th>
+            <th>Tipo de Llamada</th>
+            <th>Horario Origen</th>
+            <th>Horario Destino</th>
+            <th>Tecnología Móvil</th>
+            <th>Costo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var llamada in Model)
+        {
+            <tr>
+                <td>@llamada.Id</td>
+                <td>@llamada.NumOrigen</td>
+                <td>@llamada.NumDestino</td>
+                <td>@llamada.Duracion</td>
+                <td>@llamada.TipoLlamada</td>
+                <td>@llamada.HorarioOrigen</td>
+                <td>@llamada.HorarioDestino</td>
+                <td>@llamada.TecnologiaMovil</td>
+                <td>@llamada.Costo</td>
+            </tr>
+        }
+    </tbody>
+</table>
